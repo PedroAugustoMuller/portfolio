@@ -49,12 +49,13 @@ const projects = [
 
 <style scoped lang="scss">
 .about{
-  padding-top: 10rem !important;
+  padding: 2em !important;
   height: 100vh;
   color: var(--base-text);
 }
 .project-wrapper {
   background-color: transparent;
+  height: fit-content;
   margin: 0 !important;
   width: 50%;
   display: flex;

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Navbar from "@/components/TopBar.vue";
 import Description from "@/components/Description.vue";
-import Content from "@/components/Projects.vue";
+import Projects from "@/components/Projects.vue";
 import TopBar from "@/components/TopBar.vue";
 </script>
 
@@ -11,7 +11,7 @@ import TopBar from "@/components/TopBar.vue";
     class="content"
   >
     <Description/>
-    <Content/>
+    <Projects/>
   </v-main>
 </template>
 

@@ -4,7 +4,7 @@ import {useDark} from "@vueuse/core";
 
 const isDark = useDark({disableTransition: false})
 const playSound = () => {
-  let audio = new Audio('/audio/light-switch.mp3');
+  let audio = new Audio('./audio/light-switch.mp3');
   audio.play();
 }
 </script>
