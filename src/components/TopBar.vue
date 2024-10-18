@@ -1,5 +1,6 @@
 <script setup lang="js">
 import Switch from "@/components/Switch.vue";
+
 </script>
 
 <template>
@@ -20,7 +21,6 @@ import Switch from "@/components/Switch.vue";
   right: 0;
   margin-top: 1rem;
   background: transparent;
-  backdrop-filter: blur(4px);
   display: flex;
   justify-content: space-between;
   align-items: center;

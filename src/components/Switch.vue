@@ -1,19 +1,18 @@
+/*AUTHOR VOXYBUNS*/
 <script setup>
-import {useDark, useToggle} from "@vueuse/core";
+import {useDark} from "@vueuse/core";
 
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
+const isDark = useDark({disableTransition: false})
 const playSound = () => {
-  let audio = new Audio('/audio/click1.mp3');
+  let audio = new Audio('/audio/light-switch.mp3');
   audio.play();
 }
 </script>
 
 <template>
-  {{isDark}}
-  <label class="switch" @click="playSound()">
-    <input type="checkbox">
-    <span class="slider" @click="toggleDark()"/>
+  <label class="switch" >
+    <input type="checkbox" v-model="isDark" @change="playSound" />
+    <span class="slider"/>
   </label>
 </template>
 
@@ -21,7 +20,7 @@ const playSound = () => {
 .switch {
   width: 2rem;
   height: 1rem;
-  color: #fff;
+  color: var(--switch-background);
   font-size: 17px;
   position: relative;
   display: inline-block;
@@ -43,7 +42,7 @@ const playSound = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--switch-background);
   transition: .15s;
   border-radius: 1em;
 }
@@ -54,11 +53,11 @@ const playSound = () => {
   content: "";
   height: 1em;
   width: 1em;
-  border: 2px solid #000;
+  border: 2px solid var(--switch-border);
   border-radius: 100%;
   left: -2px;
   bottom: -2px;
-  background-color: white;
+  background-color: var(--switch-background);
   transform: translateY(-0.2em);
   box-shadow: 0 0.2em 0 #000,
   0.2em 0.4em 0 #000;
@@ -66,11 +65,11 @@ const playSound = () => {
 }
 
 input:checked + .slider {
-  background-color: #000;
+  background-color: var(--switch-off);
 }
 
 input:focus-visible + .slider {
-  box-shadow: 0 0 0 2px #000;
+  box-shadow: 0 0 0 2px var(--switch-shadow);
 }
 
 input:checked + .slider:before {
