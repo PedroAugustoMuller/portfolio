@@ -76,7 +76,7 @@ const skills = [
           class="skill"
           v-bind="props"
           :icon="['fab', skill.title]"
-          :style="skill.hovered ? {'color': skill.color,'background-color': skill.bgc, 'transition': '.3s'} : {'color': 'black','background-color': skill.bgc}"
+          :style="skill.hovered ? {'color': skill.color,'transition': '.3s'} : {}"
           @mouseover="skill.hovered = true"
           @mouseleave="skill.hovered = false"
           size="3x"/>
@@ -89,6 +89,7 @@ const skills = [
 
 <style scoped lang="scss">
 .skill{
+  color: var(--base-text);
   margin: .2em;
 }
 .skills-card{

@@ -1,7 +1,15 @@
 <script setup>
 
-import SkillsCards from "@/components/SkillsCards.vue";
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+const socials = [
+  {
+    icon: 'github',
+    link: 'https://github.com/PedroAugustoMuller',
+  },
+  {
+    icon: 'linkedin',
+    link: 'https://www.linkedin.com/in/pedro-augusto-m%C3%BCller/',
+  }
+]
 </script>
 
 <template>
@@ -13,6 +21,16 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
         <h1>Pedro Augusto Müller</h1>
       </v-container>
       <h3>Fullstack Developer</h3>
+      <h1>
+        <a
+          class="social"
+          target="_blank"
+          v-for="social in socials"
+          :href="social.link">
+          <font-awesome-icon
+            :icon="['fab', social.icon]"/>
+        </a>
+      </h1>
       <v-divider/>
       <v-container class="description__anchors">
         <a href="#about" class="description__anchors__text">
@@ -44,6 +62,11 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
   max-height: 100vh;
   background-color: transparent;
 }
+.social{
+  color: var(--base-text);
+  text-decoration: none;
+  margin-right: 0.3em;
+}
 .description {
   display: flex;
   flex-direction: column;
@@ -57,8 +80,6 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
       color: var(--base-text);
       text-decoration: none;
       font-size: 1.2rem;
-      font-family: inherit;
-      font-weight: bold;
     }
   }
 }

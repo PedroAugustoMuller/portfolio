@@ -3,12 +3,19 @@ import ProjectCard from "@/components/ProjectCard.vue";
 import SkillsCards from "@/components/SkillsCards.vue";
 const projects = [
   {
-    id: '1',
     title: 'Fullstack Dev',
     project: 'elevencash',
     description: 'worked for imply on cashless and totem autoatendimento. creating efficient solutions for the interface that producers use to manage their events, and self-service kiosks.',
     technologies: ['laravel octane', 'vuetify', 'postgresql'],
     initial_date: 'jul 2024'
+  },
+  {
+    title: 'Backend Intern',
+    project: 'programa de novos talentos imply',
+    description: "interned at imply, in the 'programa de novos talentos' (new talents program), during which I created and consumed apis, managed databases and constructed websites",
+    technologies: ['php', 'mysql', 'docker','git','html','css','linux'],
+    initial_date: 'may 2024',
+    final_date: 'jul 2024'
   },
 ];
 </script>
@@ -34,13 +41,14 @@ const projects = [
         class="project-wrapper__content__card"
       >
         <ProjectCard
-          v-for="project in projects"
-          :key="project.id"
+          v-for="(project,index) in projects"
+          :key="index"
           :title="project.title"
           :project="project.project"
           :description="project.description"
           :technologies="project.technologies"
           :initial_date="project.initial_date"
+          :final_date="project.final_date"
         />
       </v-main>
     </v-container>
@@ -49,7 +57,7 @@ const projects = [
 
 <style scoped lang="scss">
 .about{
-  padding: 2em !important;
+  padding: 4em !important;
   height: 100vh;
   color: var(--base-text);
 }
@@ -57,6 +65,7 @@ const projects = [
   background-color: transparent;
   height: fit-content;
   margin: 0 !important;
+  padding: 0 !important;
   width: 50%;
   display: flex;
   box-shadow: none;

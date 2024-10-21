@@ -87,8 +87,8 @@ const rotateCard = (event) =>{
   box-shadow: .4em .8em 0 var(--card-border);
   transition: transform 0.3s, box-shadow .3s ease-out, background-color .3s ease-out;
   margin-right: 2em;
-  margin-top: 2em;
-  padding: 20px;
+  margin-top: 4em;
+  padding: 1.3em;
 
   &:hover {
     transform: translate(-0.525em, -0.525em);
@@ -102,6 +102,7 @@ const rotateCard = (event) =>{
   &__title {
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 0 !important;
   }
 
   &__img {
