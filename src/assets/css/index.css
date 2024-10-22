@@ -1,3 +1,14 @@
+@media only screen and (max-width: 768px){
+  /**{*/
+  /*  border: 1px dashed red;*/
+  /*}*/
+}
+
+@media only screen and (min-width: 768px){
+  /**{*/
+  /*  border: 1px dashed yellow;*/
+  /*}*/
+}
 html{
   --base-background: #fffdd0;
   --base-text: #000;
@@ -12,7 +23,6 @@ html{
   scroll-behavior: smooth;
   font-family: "DejaVu Sans Mono", serif !important;
   font-weight: bold;
-  scroll-snap-type: both mandatory;
 }
 html.dark{
   /*BASE*/
@@ -35,5 +45,5 @@ html.dark{
   margin: 0 !important;
   padding: 0 !important;
   background-color: transparent !important;
-  display: flex !important;
+  display: block !important;
 }

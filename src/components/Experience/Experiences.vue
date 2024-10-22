@@ -1,6 +1,6 @@
 <script setup>
-import ProjectCard from "@/components/ProjectCard.vue";
-import SkillsCards from "@/components/SkillsCards.vue";
+import ExperienceCard from "@/components/Experience/ExperienceCard.vue";
+import SkillsCards from "@/components/About/SkillsCards.vue";
 const projects = [
   {
     title: 'Fullstack Dev',
@@ -40,7 +40,7 @@ const projects = [
       <v-main
         class="project-wrapper__content__card"
       >
-        <ProjectCard
+        <ExperienceCard
           v-for="(project,index) in projects"
           :key="index"
           :title="project.title"

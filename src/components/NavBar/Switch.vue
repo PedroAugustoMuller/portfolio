@@ -24,7 +24,6 @@ const playSound = () => {
   font-size: 17px;
   position: relative;
   display: inline-block;
-  margin-right: 1.5rem;
 }
 
 .switch input {

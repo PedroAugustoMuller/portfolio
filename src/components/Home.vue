@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import Navbar from "@/components/TopBar.vue";
+import Navbar from "@/components/NavBar/NavBar.vue";
 import Description from "@/components/Description.vue";
-import Experiences from "@/components/Experiences.vue";
-import TopBar from "@/components/TopBar.vue";
+import Experiences from "@/components/Experience/Experiences.vue";
+import NavBar from "@/components/NavBar/NavBar.vue";
 </script>
 
 <template>
-  <TopBar/>
+  <NavBar/>
   <v-main
     class="content"
   >
@@ -17,6 +17,16 @@ import TopBar from "@/components/TopBar.vue";
 
 <style scoped lang="scss">
 .content {
-  display: flex;
+  background-color: transparent;
+}
+@media only screen and (max-width: 768px) {
+  .content{
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px){
+  .content{
+    display: flex;
+  }
 }
 </style>
